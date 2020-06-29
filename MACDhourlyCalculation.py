@@ -17,17 +17,8 @@ macd_df['EMA 26'] = close_df['close'].ewm(
     span=26, adjust=False, ignore_na=False).mean()
 macd_df['MACD'] = macd_df['EMA 12'] - macd_df['EMA 26']
 macd_df['MACD_PCENT'] = macd_df['MACD'] / macd_df['close']
-macd_df['MACD_PCENT'] = macd_df['MACD_PCENT'].apply(lambda x: x*100)
+macd_df['MACD_PCENT'] = macd_df['MACD_PCENT'].apply(lambda x: x*100))
 
-# # ax1 = plt.subplot2grid((6,1), (0,0), rowspan = 5, colspan = 1)
-# # ax2 = plt.subplot2grid((6,1), (5,0), rowspan = 1, colspan = 1, sharex=ax1)
-
-# # ax1.plot(macd_df.index,macd_df['close'])
-# # ax1.plot(macd_df.index,macd_df['EMA 26'])
-# # ax1.plot(macd_df.index,macd_df['EMA 12'])
-# # ax2.bar(macd_df.index,macd_df['MACD'])
 df['MACD'] = macd_df['MACD']
 df['MACD_PCENT'] = macd_df ['MACD_PCENT']
-df.to_csv('SNAPD.csv')
-
-# # plt.show()
+df.to_csv('SNAP.csv')
