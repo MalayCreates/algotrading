@@ -13,7 +13,7 @@ import pandas_datareader.data as web
 #######################################################################
 
 # alpha vantage key
-avKey = 'OSNE6LNIX483XMBH'
+avKey = 'ALPHA VANTAGE KEY'
 # Cannot give out my API key or Secret Key
 APIkey = 'API KEY'
 SecretKey = 'SECRET KEY'
